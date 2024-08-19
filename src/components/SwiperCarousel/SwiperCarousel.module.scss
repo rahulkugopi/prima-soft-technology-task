@@ -1,0 +1,84 @@
+@import '/src/App.scss';
+
+.swiperCarousel {
+    width: 100%;
+    height: 100%;
+    padding: 4em 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    .slide {
+        background-color: $tertiary-color;
+        border-radius: 20px;
+        transition: all 0.9s ease;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 4em 2.5em;
+        box-sizing: border-box;
+
+        .userImg {
+            width: 60px;
+            height: 60px;
+
+            img {
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+
+        h3 {
+            font-size: 22px;
+            font-weight: 500;
+            color: $subColor;
+            font-family: $font-family-secondary ;
+        }
+
+        p {
+            font-size: 22px;
+            font-weight: 400;
+            color: $innerColor;
+            margin: 0;
+            font-family: $font-family-secondary;
+        }
+
+        &:nth-of-type(odd) {
+            margin: 0;
+        }
+
+        &:nth-of-type(even) {
+            margin: 80px 0 0px 0;
+        }
+
+        &:hover{
+            border: solid 1px #ccc;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .swiperCarousel {
+        width: 100%;
+        padding: 0 25px;
+        box-sizing: border-box;
+
+        .slide {
+            padding: 2em 1em;
+            height: auto;
+            max-height: 320px;
+
+            h3 {
+                font-size: 18px;
+            }
+
+            p {
+                font-size: 15px;
+            }
+
+            &:nth-of-type(even) {
+                margin: 0;
+            }
+        }
+    }
+}
