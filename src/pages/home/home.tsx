@@ -1,6 +1,6 @@
+import React from 'react';
 import SwiperCarousel from '../../components/SwiperCarousel/SwiperCarousel';
 import style from './home.module.scss';
-import React, { Fragment } from 'react';
 
 function Home() {
     return (
@@ -10,11 +10,11 @@ function Home() {
                 <div className={style.headerContent}>
                     <p>Testimonials that speak louder than words! Customer stories that light up our day.</p>
                 </div>
-
-                <Fragment>
-                    <SwiperCarousel />    
-                </Fragment>
             </div>
+
+            <div className={style.carouselView}>
+                <SwiperCarousel />
+            </div>        
         </div>
     )
 }

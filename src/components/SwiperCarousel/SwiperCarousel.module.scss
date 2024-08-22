@@ -7,76 +7,92 @@
     margin: 0;
     box-sizing: border-box;
 
-    .slide {
-        background-color: $tertiary-color;
-        border-radius: 20px;
-        transition: all 0.9s ease;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 4em 2.5em;
-        box-sizing: border-box;
+    .sliderMain {
+        transition: all 1.5s ease;
 
-        .userImg {
-            width: 60px;
-            height: 60px;
+        .slider {
+            background-color: $extra-color;
+            border-radius: 20px;
+            padding: 40px 30px 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
 
-            img {
-                max-width: 100%;
-                max-height: 100%;
+            .thumbImg {
+                width: 60px;
+                height: 60px;
+
+                img {
+                    max-width: 100%;
+                    max-height: 100%;
+                }
+            }
+
+            .content {
+                width: 100%;
+                text-align: center;
+
+                h3 {
+                    font-size: 22px;
+                    font-weight: 500;
+                    color: $subColor;
+                    font-family: $font-family-secondary ;
+                    line-height: 33px;                    
+                }
+
+                p {
+                    font-size: 22px;
+                    font-weight: 400;
+                    color: $innerColor;
+                    margin: 0;
+                    font-family: $font-family-secondary;
+                    line-height: 33px;
+                }
+
+            }
+
+            &:hover {
+                outline: solid 1px $tertiary-color;
+                cursor: pointer;
             }
         }
 
-        h3 {
-            font-size: 22px;
-            font-weight: 500;
-            color: $subColor;
-            font-family: $font-family-secondary ;
-        }
-
-        p {
-            font-size: 22px;
-            font-weight: 400;
-            color: $innerColor;
-            margin: 0;
-            font-family: $font-family-secondary;
-        }
-
         &:nth-of-type(odd) {
-            margin: 0;
+            margin: 120px 0 0px 0;
         }
 
         &:nth-of-type(even) {
-            margin: 80px 0 0px 0;
-        }
-
-        &:hover{
-            border: solid 1px #ccc;
+            margin: 0;
         }
     }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 992px) {
     .swiperCarousel {
         width: 100%;
-        padding: 0 25px;
+        padding:  40px 30px 50px;   
         box-sizing: border-box;
 
-        .slide {
-            padding: 2em 1em;
-            height: auto;
-            max-height: 320px;
+        .sliderMain {
 
-            h3 {
-                font-size: 18px;
+            .slider {
+                padding: 1em 1em;
+                height: auto;                
+
+                .content {
+                    h3 {
+                        font-size: 16px;
+                        line-height: 25px;
+                    }
+
+                    p {
+                        font-size: 13px;
+                        line-height: 25px;
+                    }
+                }
             }
 
-            p {
-                font-size: 15px;
-            }
-
-            &:nth-of-type(even) {
+            &:nth-of-type(odd) {
                 margin: 0;
             }
         }

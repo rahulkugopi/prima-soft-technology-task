@@ -31,18 +31,17 @@
                 text-align: center;
             }
         }
+    }    
 
-    }
-
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 992px) {
         .header {
             h2 {
-                font-size:24px;
+                font-size: 24px;
             }
 
             .headerContent {
-                p{
-                    font-size:16px;
+                p {
+                    font-size: 16px;
                 }
             }
         }
